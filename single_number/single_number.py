@@ -4,8 +4,11 @@ Returns: an integer
 '''
 def single_number(arr):
     # Your code here
-
-    pass
+    # iterate through array
+    # if there are no duplicates, return number
+    for el in arr:
+        if arr.count(el) < 2:
+            return el
 
 
 if __name__ == '__main__':

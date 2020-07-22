@@ -2,10 +2,20 @@
 Input: a List of integers
 Returns: a List of integers
 '''
-def product_of_all_other_numbers(arr):
-    # Your code here
 
-    pass
+def product_of_all_other_numbers(arr):
+    new_arr = []
+    # at each index find the product of all other indexes, except the one you are on
+    for i in range(len(arr)):
+        before = arr[:i]
+        after = arr[i + 1:]
+        other_nums = before + after
+        product = 1
+        for i in other_nums:
+            product *= i
+        new_arr.append(product)
+    return new_arr
+
 
 
 if __name__ == '__main__':
